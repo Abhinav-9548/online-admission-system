@@ -1,0 +1,104 @@
+.studentcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 40px; /* Adjust horizontal and vertical spacing between cards */
+   
+  }
+  .dashboarddiv{
+    margin-top: 150px;
+  height: 91vh;
+}
+  
+   
+  /* Add a gap between the first and second row */
+  .studentcard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px; /* Add vertical space between rows */
+  }
+   
+  @keyframes studentcard-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+   
+  .studentcard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    position: relative;
+    padding-top: 50px; /* Space for the image */
+    opacity: 0; /* Initially hide the cards */
+    transform: scale(0.5); /* Initial smaller size */
+  }
+   
+  .studentcard.show {
+    animation: studentcard-pop 0.5s forwards; /* Apply the animation */
+  }
+   
+  .studentcard:hover {
+    background-color: #f0f0f0; /* Lighten the background color */
+    transform: scale(1.05); /* Slightly increase the card size */
+  }
+   
+  .studentcard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+   
+  .studentcard p {
+    font-size: 16px;
+    color: #555;
+  }
+   
+  .studentcard-logo-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ensure there's a white background */
+  }
+   
+  .studentcard-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   
+  /* Responsive styles */
+  @media screen and (max-width: 1024px) {
+    .studentcard {
+        width: calc(33.33% - 40px); /* Three cards per row */
+    }
+  }
+   
+  @media screen and (max-width: 768px) {
+    .studentcard {
+        width: calc(50% - 40px); /* Adjust the width for smaller screens */
+    }
+  }
+   
+  @media screen and (max-width: 576px) {
+    .studentcard {
+        width: calc(100% - 40px); /* Adjust the width for even smaller screens */
+    }
+  }

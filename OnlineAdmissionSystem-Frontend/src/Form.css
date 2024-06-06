@@ -1,0 +1,267 @@
+.App {
+    text-align: center;
+    
+    margin-top: 90px;
+    height: 91vh;
+  }
+ 
+  #applyBtn {
+    padding: 10px 20px;
+    background-color: #007aff; /* macOS-like blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+ 
+  #applyBtn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+ 
+  .formBox {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px; /* Increased width */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+    transform: scale(0.95); /* Slightly shrink when not visible */
+    position: relative;
+    backdrop-filter: blur(10px); /* Glass-like effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the glass effect */
+  }
+ 
+  #formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition effect */
+    visibility: hidden; /* Initially hidden */
+    z-index: 1000; /* Ensure the form is on top */
+    pointer-events: none; /* Prevent interaction when invisible */
+  }
+ 
+  #formContainer.visible {
+    opacity: 1;
+    visibility: visible; /* Make visible */
+    pointer-events: auto; /* Allow interaction when visible */
+  }
+ 
+  #formContainer.closing .formBox {
+    animation: shrinkToButton 0.5s forwards; /* Shrink animation */
+  }
+ 
+  @keyframes shrinkToButton {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.1) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  label {
+    margin-top: 10px;
+    text-align: left;
+  }
+ 
+  input,
+  textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+ 
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+ 
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+ 
+  /* Close button styles */
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+ 
+  .closeBtn:hover {
+    transform: rotate(90deg); /* Rotate animation on hover */
+    color: #ff3b30; /* macOS-like red color */
+  }
+  /* src/components/ConfirmationPage.css */
+ 
+  /* Container for the confirmation page
+  /* .confirmation-page {
+    display: flex;
+    flex-direction: column; /* Display items in a column on small screens
+    align-items: center;
+    padding: 20px;
+  }
+ 
+  /* Main content area
+  .confirmation-content {
+    width: 100%; /* Take up full width
+    max-width: 1200px; /* Max width for large screens
+  } */
+ 
+  /* Confirmation message section */
+  .confirmation-message {
+    margin-bottom: 20px; /* Add space between sections */
+  }
+ 
+  /* Payment details section */
+  .payment-details {
+    flex: 0 0 300px; /* Fixed width for the payment details section */
+    margin: 0 auto; /* Center the section */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+ 
+  /* Buttons section */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  /* View details and Go back buttons */
+  .view-details-btn, .go-back-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+ 
+  /* Media query for responsiveness */
+  @media (min-width: 768px) {
+    /* For screens larger than 768px */
+    .confirmation-page {
+      flex-direction: row; /* Display items in a row */
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+ 
+    .confirmation-message {
+      flex: 1;
+      margin-right: 20px;
+    }
+  }
+ 
+  .footer {
+    background-color: #222121;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 15px 0;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+  }
+ 
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+ 
+  /* FormComponent.css */
+  /* #formContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  } */
+ 
+  #formContainer.visible {
+    opacity: 1.5;
+  }
+ 
+  #formContainer.closing {
+    opacity: 0;
+  }
+ 
+  .formBox {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent form background */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 500px;
+    position: relative;
+    overflow: auto;
+    max-height: 80%;
+    backdrop-filter: blur(5px); /* Glass-like effect */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for the glass effect */
+  }
+ 
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+ 
+  .card-body {
+    padding: 0;
+  }
+ 
+  .form-group {
+    margin-bottom: 1rem;
+  }
+ 
+  .btn-secondary {
+    width: 100%;
+  }
+ 
+  @media (max-width: 576px) {
+    .formBox {
+      width: 90%;
+      padding: 1rem;
+    }
+  }

@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif; /* Set a default font for the body */
+    background-color: #f5f5f5; /* Light background for the page */
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .confirmation-page {
+    padding: 3rem; /* Increased padding for more space */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for the confirmation page */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+ 
+  .confirmation-page.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+ 
+  .confirmation-message {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+ 
+  .confirmation-message h1 {
+    color: #28a745;
+    font-size: 2.5rem; /* Larger font size */
+    font-family: 'Georgia', serif; /* More elegant font */
+  }
+ 
+  .confirmation-message p {
+    margin: 1rem 0;
+    font-size: 1.25rem; /* Larger font size */
+  }
+ 
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap between buttons */
+  }
+ 
+  .view-details-btn, .go-back-btn {
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Larger font size */
+    transition: background-color 0.3s ease;
+  }
+ 
+  .view-details-btn {
+    background-color: #007bff;
+    color: white;
+  }
+ 
+  .view-details-btn:hover {
+    background-color: #0056b3;
+  }
+ 
+  .go-back-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+ 
+  .go-back-btn:hover {
+    background-color: #5a6268;
+  }
+ 
+  .admission-details {
+    background-color: #f8f9fa;
+    padding: 2rem; /* Increased padding */
+    border-radius: 8px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+ 
+  .admission-details h2 {
+    color: #343a40;
+    margin-bottom: 1.5rem; /* Increased margin bottom */
+    font-size: 1.75rem; /* Larger font size */
+    font-family: 'Georgia', serif; /* More elegant font */
+  }
+ 
+  .admission-details p {
+    margin: 0.75rem 0; /* Increased margin */
+    font-size: 1.1rem; /* Larger font size */
+  }
+ 
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .confirmation-page {
+        padding: 2rem;
+    }
+ 
+    .confirmation-message h1 {
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+    }
+ 
+    .buttons {
+        flex-direction: column;
+    }
+ 
+    .view-details-btn, .go-back-btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+  }
+ 
+  @media (max-width: 480px) {
+    .confirmation-message h1 {
+        font-size: 1.75rem; /* Adjusted font size for smallest screens */
+    }
+ 
+    .admission-details {
+        padding: 1rem;
+    }
+ 
+    .admission-details h2 {
+        font-size: 1.5rem; /* Adjusted font size for smallest screens */
+    }
+ 
+    .admission-details p {
+        font-size: 1rem; /* Adjusted font size for smallest screens */
+    }
+  }

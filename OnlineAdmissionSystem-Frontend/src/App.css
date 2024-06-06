@@ -1,0 +1,495 @@
+body{
+  background-image:  url(./assets/cover.jpg);
+  background-size: cover;
+  margin: 0;
+  background-attachment: fixed;
+  /* padding-top: 40px; */
+}
+.h3{
+  color: #000000;
+}
+
+marquee {
+  display: inline-block;
+  width: -webkit-fill-available;
+}
+.studentallapplicationdiv{
+  margin: 90px;
+  margin-bottom: 163px;
+ 
+}
+
+.programschedulecourse{
+  margin-top: 90px;
+  height: 91vh;
+}
+
+.programschedulebranch{
+  margin-top: 90px;
+  height: 91vh;
+}
+.branchdiv{
+  margin-top: 80px;
+  margin-bottom: 170px;
+}
+.applydiv{
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.studentadmissioncomponentdiv{
+  margin-top: 100px;
+  margin-bottom: 90px;
+}
+.studentapplicationdiv{
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+.paymentdiv{
+  margin-top: 110px;
+  margin-bottom: 90px;
+}
+.coursediv{
+  margin-top: 80px;
+  margin-bottom: 165px;
+ 
+}
+.applicationdiv{
+  margin-top: 90px;
+  height: 91vh;
+}
+.collegediv{
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+.searchdiv{
+  margin-top: 90px;
+  margin-bottom: 200px;
+}
+.universitydiv{
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+
+.programscheduleapplydiv{
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+.coursecomponentdiv{
+  margin-top: 50px;
+  margin-bottom: 10000px;
+}
+
+
+.upcomingevent{
+  margin-top: 50px;
+  /* height: 100vh; */
+  margin-bottom: 90px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.marquee{
+  margin-top: 90px;
+}
+.coroseldiv{
+  margin-top: 90px;
+  margin-left: 50px;
+  margin-bottom: 33px;
+  margin-right: 50px;
+  
+}
+
+
+.coroselcards{
+  border-radius: 40px;
+}
+
+
+
+.university-component-container {
+  position: relative;
+}
+
+
+
+.footerh6{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.profile{
+  margin-right: 10px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin-right: 5px; */
+}
+.search-icon {
+  color: blacl;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+
+
+
+/* -------------------------------------program card logo------------------------------- */
+.programcard {
+   width: 550px; 
+  
+
+/*   
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  position: relative;
+  padding-top: 30px;  */
+
+
+}
+
+.programbottom{
+  margin-bottom: 60px;
+}
+
+ 
+.program-logo-container {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #98d5df;
+}
+ 
+.program-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+/* Responsive styles for ProgramComponent */
+@media screen and (max-width: 768px) {
+  .programcard {
+    width: calc(50% - 20px); /* Adjust the width for smaller screens */
+  }
+}
+ 
+@media screen and (max-width: 576px) {
+  .programcard {
+    width: calc(100% - 20px); /* Adjust the width for even smaller screens */
+  }
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+  .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(85px);
+   
+  }
+  
+  span{
+    text-transform: capitalize;
+  }
+  h3{
+    color: #ffffff;
+  }
+.align-centre{
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.custom-card-event {
+  width: 50vw;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+}
+
+.custom-card {
+  width: 18rem;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+
+.b{
+  background-color: #4dcecc;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 8px;
+}
+.noData{
+  text-align: center;
+  
+  font-size: 40px;
+  color: red;
+  /* margin-top: 17%; */
+  padding: 245px;
+}
+
+.about{
+  padding: 160px;
+}
+.custom-link {
+  text-decoration: none !important; /* Important to override Bootstrap's default styles */
+}
+.custom-link2{
+  text-decoration: none !important;
+  color: #000000;
+  /* text-align: right;
+  margin-left: 500px; */
+
+}
+.custom-link3{
+  text-decoration: none !important;
+  color: #ffffff;
+}
+
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-image:  url(./assets/6017056.jpg);
+  /* animation: card-pop 0.5s forwards; */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.programcard:hover {
+  background-color: #f0f0f0; /* Lighten the background color */
+  transform: scale(1.05); /* Slightly increase the card size */
+}
+.programcard{
+  animation: card-pop 0.5s forwards;
+}
+@keyframes card-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container {
+  max-width: 900px;
+  
+}
+.cc{
+  padding:90px;
+  
+}
+.adminData{
+  padding: 70px;
+}
+
+.contact-container {
+  padding: 50px 0;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.social-media-list li {
+  margin: 0 10px;
+}
+
+.social-media-list a {
+  color: #333;
+}
+
+.social-media-list a:hover {
+  color: #007bff;
+}
+
+.button{
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Form CSS ----------------------------------------------------------------------------------*/
+/* src/styles/App.css */
+
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#applyBtn {
+  padding: 10px 20px;
+  background-color: #007aff; /* macOS-like blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#applyBtn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+#formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition effect */
+  visibility: hidden; /* Initially hidden */
+  z-index: 1000; /* Ensure the form is on top */
+  pointer-events: none; /* Prevent interaction when invisible */
+}
+
+#formContainer.visible {
+  opacity: 1;
+  visibility: visible; /* Make visible */
+  pointer-events: auto; /* Allow interaction when visible */
+}
+
+.formBox {
+  background-color: rgba(265, 265, 265, 0.9); /* Semi-transparent form background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px; /* Increased width */
+  transition: transform 0.5s ease; /* Smooth transition effect */
+  transform: scale(0.95); /* Slightly shrink when not visible */
+  position: relative;
+}
+
+#formContainer.visible .formBox {
+  transform: scale(1); /* Return to normal size when visible */
+}
+
+#formContainer.closing .formBox {
+  animation: shrinkToButton 0.5s forwards; /* Shrink animation */
+}
+
+@keyframes shrinkToButton {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  text-align: left;
+}
+
+input,
+textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Close button styles */
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.closeBtn:hover {
+  transform: rotate(90deg); /* Rotate animation on hover */
+  color: #ff3b30; /* macOS-like red color */
+}

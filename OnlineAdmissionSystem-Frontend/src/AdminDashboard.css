@@ -1,0 +1,146 @@
+.admincard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 40px; /* Adjust horizontal and vertical spacing between cards */
+   
+  
+  }
+
+
+
+  /* ----------------------------------FORM---------------------------------------- */
+  .collegecomponentdiv{
+    padding:90px;
+  }
+
+
+/* -------------------------------------------------------------------------------- */
+.programdiv{
+  margin-top: 80px;
+  margin-bottom: 170px;
+}
+  .admindiv{
+    margin-top: 120px;
+    height: 91vh;
+  }
+  .adminpaymentdiv{
+    margin-top: 120px;
+    height: 91vh;
+  }
+  .adminprogramschedulelistdiv{
+    margin-top: 120px;
+    height: 91vh;
+  }
+  .adminprogramschedulecomponentdiv{
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+.adminallprogramschedulediv{
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+  .adminallapplicationdiv{
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  .adminallapplicationformdiv{
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  .adminalladmissiondiv{
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  /* Add a gap between the first and second row */
+  .admincard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px; /* Add vertical space between rows */
+  }
+   
+  @keyframes studentcard-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+   
+  .admincard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    position: relative;
+    padding-top: 50px; /* Space for the image */
+    opacity: 0; /* Initially hide the cards */
+    transform: scale(0.5); /* Initial smaller size */
+  }
+   
+  .admincard.show {
+    animation: studentcard-pop 0.5s forwards; /* Apply the animation */
+  }
+   
+  .admincard:hover {
+    background-color: #f0f0f0; /* Lighten the background color */
+    transform: scale(1.05); /* Slightly increase the card size */
+  }
+
+   
+  .admincard h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+   
+  .admincard p {
+    font-size: 16px;
+    color: #555;
+  }
+   
+  .admincard-logo-container {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ensure there's a white background */
+  }
+   
+  .admincard-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  /* Responsive styles */
+  @media screen and (max-width: 1024px) {
+    .admincard {
+        width: calc(33.33% - 40px); /* Three cards per row */
+    }
+  }
+ 
+  @media screen and (max-width: 768px) {
+    .admincard {
+        width: calc(50% - 40px); /* Adjust the width for smaller screens */
+    }
+  }
+ 
+  @media screen and (max-width: 576px) {
+    .admincard {
+        width: calc(100% - 40px); /* Adjust the width for even smaller screens */
+    }
+  }
